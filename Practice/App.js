@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, Button } from "react-native";
+import { StyleSheet, Text, Alert, SafeAreaView, Button } from "react-native";
 
 export default function App() {
   return (
@@ -9,7 +9,13 @@ export default function App() {
       <Button
         title="Learn More"
         color="red"
-        onPress={() => alert("Button Tapped")}
+        onPress={() =>
+          Alert.alert("Helllo There", "Do you agree to all the listed?", [
+            { text: "Remind me later" },
+            { text: "Yes" },
+            { text: "No" },
+          ])
+        }
       />
       <StatusBar backgroundColor="#07A0C3" />
     </SafeAreaView>
